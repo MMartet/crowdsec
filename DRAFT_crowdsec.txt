@@ -1,0 +1,31 @@
+Install crowdsec par choco
+
+PS U:\> cscli.exe collections install crowdsecurity/windows-firewall
+time="2024-05-20T15:27:16+02:00" level=warning msg="crowdsecurity/windows-firewall-logs: overwrite"
+time="2024-05-20T15:27:17+02:00" level=warning msg="crowdsecurity/iptables-scan-multi_ports: overwrite"
+time="2024-05-20T15:27:17+02:00" level=warning msg="crowdsecurity/firewall_base: overwrite"
+time="2024-05-20T15:27:17+02:00" level=fatal msg="error while installing 'crowdsecurity/windows-firewall': while enabling crowdsecurity/windows-firewall: crowdsecurity/windows-firewall is tainted, won't enable unless --force"
+PS U:\> cscli.exe collections upgrade crowdsecurity/windows-firewall
+
+
+"upgrade --force"
+
+
+30/05/2024 = Tout désinstaller/réinstaller avec chocolatey
+
+PS C:\Program Files\CrowdSec> .\cscli.exe collections list
+
+COLLECTIONS
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ Name                                📦 Status   Version   Local Path
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ crowdsecurity/base-http-scenarios   ✔️ enabled   0.8       C:\ProgramData\CrowdSec\config\collections\base-http-scenar-
+                                                           ios.yaml
+ crowdsecurity/http-cve              ✔️ enabled   2.6       C:\ProgramData\CrowdSec\config\collections\http-cve.yaml
+ crowdsecurity/iis                   ✔️ enabled   0.1       C:\ProgramData\CrowdSec\config\collections\iis.yaml
+ crowdsecurity/mssql                 ✔️ enabled   0.1       C:\ProgramData\CrowdSec\config\collections\mssql.yaml
+ crowdsecurity/windows               ✔️ enabled   0.1       C:\ProgramData\CrowdSec\config\collections\windows.yaml
+ crowdsecurity/windows-firewall      ✔️ enabled   0.2       C:\ProgramData\CrowdSec\config\collections\windows-firewall-
+                                                           .yaml
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+.\cscli.exe collections install crowdsecurity/windows-firewall
